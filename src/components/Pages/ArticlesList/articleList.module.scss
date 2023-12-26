@@ -1,0 +1,11 @@
+div{ transition: all 0.5s !important;
+    animation: appearing 0.3s ease-out;
+    @keyframes appearing {
+        0% {
+          opacity: 0;
+        }
+      
+        100% {
+          opacity: 1;
+        }
+      }}

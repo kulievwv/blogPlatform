@@ -1,0 +1,111 @@
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    display: flex;
+    align-items: center; 
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.05);
+    a {  
+        text-decoration: none; 
+        color: inherit; 
+    
+        &:visited {
+          color: inherit; 
+        }
+      }
+
+    .title{
+        margin-left: 90px;
+        font-size: 22px;
+        font-weight: 400;
+        vertical-align: middle;
+        border-radius: 5px;
+        padding: 10px 18px 12px 16px;
+        transition: color 0.5s ease, background-color 0.5s ease;
+        text-decoration: none;
+    }
+    .title:hover{
+        background-color: #1890ff;
+        color: white;
+        cursor: pointer;
+    }
+
+    .sign{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 90px;
+        font-size: 18px;
+        font-weight: 500;
+    .sign * {
+        margin-left: 20px;
+    }
+        .image{
+            height: 50px;
+            width: 50px;
+            margin-left: 10px;
+            border-radius: 50%;
+        }
+        .in{
+            margin-right: 20px;
+            border-radius: 5px;
+            padding: 10px 18px 12px 16px;
+            transition: color 0.5s ease, background-color 0.5s ease;
+        }
+        .in:hover{
+            background-color: #1890ff;
+            color: white;
+            cursor: pointer;
+        }
+        .up{
+            color: #52C41A;
+            border: 1px solid #52C41A;
+            border-radius: 5px;
+            padding: 10px 14px 12px 14px;
+            transition: color 0.5s ease, background-color 0.5s ease;
+        }
+        .up:hover{
+            background-color: #52C41A;
+            color: white;
+            cursor: pointer;
+        }
+        .create{
+            font-size: 16px;
+            color: #52C41A;
+            border: 1px solid #52C41A;
+            border-radius: 5px;
+            padding: 8px 12px;
+            vertical-align: middle;
+            transition: color 0.5s ease, background-color 0.5s ease;
+        }
+        .create:hover{
+            background-color: #52C41A;
+            color: white;
+            cursor: pointer;
+        }
+        .out{
+            margin-left: 30px;
+            color: rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            padding: 10px 15px 12px 15px;
+            transition: color 0.5s ease, background-color 0.5s ease;
+            background: none; /* Убираем фон */
+            color: inherit; /* Цвет текста наследуется от родителя */
+            font: inherit; /* Шрифт наследуется от родителя */
+            cursor: pointer; /* Курсор в виде указателя */
+            outline: inherit; 
+        }
+        .out:hover{
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white
+        }
+        .username{
+            margin-left: 30px;
+        }
+    }
+
+}

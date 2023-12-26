@@ -1,0 +1,18 @@
+body{
+    margin-top: 0 !important
+}
+
+.image{
+    width: 700px;
+    height: 600px;
+}
+
+.message {
+    margin: 0 auto;
+    width: 700px;
+    margin-top: 50px;
+    font-size: 30px;
+    p {
+      text-align: center;
+    }
+  }
