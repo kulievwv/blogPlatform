@@ -17,7 +17,7 @@ export const SigIn: React.FC = () => {
 
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/articles', { replace: true });
+            navigate('/blogPlatform/articles', { replace: true });
         }
     }, [isLoggedIn, navigate]);
 
@@ -38,7 +38,7 @@ export const SigIn: React.FC = () => {
             .then((payload) => {
                 Cookies.set('token', payload.user.token, { expires: 7, path: '/' });
                 dispatch(setLoggedIn(true));
-                navigate('/articles', { replace: true });
+                navigate('/blogPlatform/articles', { replace: true });
             })
             .catch((error) => {
                 console.log(error);
@@ -88,7 +88,7 @@ export const SigIn: React.FC = () => {
                 </div>
                 <input type='submit' value="Login" className={classes.login}></input>
             </div>
-            <div className={classes.haveAccount}>Don't have an account? <Link to='/registration'>Sign Up.</Link></div>
+            <div className={classes.haveAccount}>Don't have an account? <Link to='/blogPlatform/registration'>Sign Up.</Link></div>
         </form>
     );
 }

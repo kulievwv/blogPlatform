@@ -42,7 +42,7 @@ export const ArticlePreview: React.FC<{ article: IArticle }> = ({ article }) => 
             <div className={classes.article}>
                 <div className={classes.main}>
                     <div className={classes.header}>
-                        <Link to={`/articles/${article.slug}`} className={classes.title}>{article.title}</Link>
+                        <Link to={`/blogPlatform/articles/${article.slug}`} className={classes.title}>{article.title}</Link>
                         <label>
                         <input
                             type="checkbox"

@@ -35,9 +35,9 @@ export const Article: React.FC = () => {
             const sure = window.confirm('Are you sure to delete this article?')
             if (sure) {
                 deleteArticle(articleId)
-                    .then(() => navigate('/articles', { replace: true }))
+                    .then(() => navigate('/blogPlatform/articles', { replace: true }))
                     .catch((error) => console.error('Failed to delete the article:', error));
-                navigate('/articles', { replace: true })
+                navigate('/blogPlatform/articles', { replace: true })
             }
         } else {
             console.error('Article ID is undefined');
@@ -45,7 +45,7 @@ export const Article: React.FC = () => {
     }
 
     const editArticle = () => {
-        navigate(`/articles/${articleId}/edit`)
+        navigate(`/blogPlatform/articles/${articleId}/edit`)
     }
 
     const handleLikeChange = async () => {

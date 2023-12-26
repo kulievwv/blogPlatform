@@ -28,15 +28,19 @@ function App() {
       <Header/>
       <div className={classes.body}>
         <Routes>
-              <Route path='/articles' element={<ArticlesList />}></Route>
-              <Route path='/articles/:articleId' element={<Article />}></Route>
-              <Route path='/' element={<ArticlesList />} ></Route>
-              <Route path='/registration' element={<SignUp />} ></Route>
-              <Route path='/authorization' element={<SigIn />} ></Route>
-              <Route path='/editProfile' element={<EditProfile />} ></Route>
-              <Route path='/createArticle' element={<CreateArticle />} ></Route>
-              <Route path='/articles/:articleId/edit' element={<EditArticle />} ></Route>
+          <Route path='/blogPlatform'>
+              <Route path='/blogPlatform/articles' element={<ArticlesList />}></Route>
+              <Route path='/blogPlatform/articles/:articleId' element={<Article />}></Route>
+              <Route path='/blogPlatform' element={<ArticlesList />} ></Route>
+              <Route path='/blogPlatform/registration' element={<SignUp />} ></Route>
+              <Route path='/blogPlatform/authorization' element={<SigIn />} ></Route>
+              <Route path='/blogPlatform/editProfile' element={<EditProfile />} ></Route>
+              <Route path='/blogPlatform/createArticle' element={<CreateArticle />} ></Route>
+              <Route path='/blogPlatform/articles/:articleId/edit' element={<EditArticle />} ></Route>
               <Route path="*" element={<PageNotFound />}></Route>
+          </Route>
+          <Route path='/' element={<ArticlesList />} ></Route>
+              
         </Routes>
       </div>
       

@@ -18,14 +18,14 @@ export const EditArticle: React.FC = () => {
 
   useEffect(() => {
     if (!Cookies.get('token')) {
-      navigate('/authorization', { replace: true });
+      navigate('/blogPlatform/authorization', { replace: true });
     }
   }, [isLoggedIn, navigate]);
 
   useEffect(() => {
     isOwnArticle = data?.article.author.username === Cookies.get('username');
     if(!isOwnArticle){
-      navigate(`/articles/${articleId}`, { replace: true })
+      navigate(`/blogPlatform/articles/${articleId}`, { replace: true })
     }
   }, [data])
 
@@ -81,7 +81,7 @@ export const EditArticle: React.FC = () => {
       },
     })
     .then((payload) => {
-      navigate('/articles', { replace: true });
+      navigate('/blogPlatform/articles', { replace: true });
     })
     .catch((error) => {
       console.log(error);

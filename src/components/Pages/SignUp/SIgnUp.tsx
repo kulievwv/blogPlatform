@@ -18,7 +18,7 @@ export const SignUp: React.FC = () => {
     const isLoggedIn = useSelector((state: RootState) => state.auth.isLogged);
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/articles', { replace: true });
+            navigate('/blogPlatform/articles', { replace: true });
         }
     }, [isLoggedIn, navigate]);
     const {
@@ -33,7 +33,6 @@ export const SignUp: React.FC = () => {
 
     const typedError = error as { status: number; data: { errors: Record<string, string> } };
 
-    // Функция для получения сообщения об ошибке по имени поля
     const getError = (fieldName: string) => {
         if (typedError && typedError.data && typedError.data.errors) {
             return typedError.data.errors[fieldName];
@@ -50,7 +49,7 @@ export const SignUp: React.FC = () => {
                 .then((payload) => {
                     Cookies.set('token', payload.user.token, { expires: 7, path: '/' });
                     dispatch(setLoggedIn(true))
-                    navigate('/articles', { replace: true })
+                    navigate('/blogPlatform/articles', { replace: true })
                 })
                 .catch((error) => {
                     
@@ -148,7 +147,7 @@ export const SignUp: React.FC = () => {
                     <input type='submit' value="Create" className={classes.create}></input>
                     
                 </div>
-                <div className={classes.haveAccount}>Already have an account? <Link to='/authorization'>Sign In.</Link></div>
+                <div className={classes.haveAccount}>Already have an account? <Link to='/blogPlatform/authorization'>Sign In.</Link></div>
             </form>
         </>
     )

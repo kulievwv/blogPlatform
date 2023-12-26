@@ -15,7 +15,7 @@ export const EditProfile: React.FC = () => {
     const isLoggedIn = useSelector((state: RootState) => state.auth.isLogged);
     useEffect(() => {
         if (!Cookies.get('token')) {
-            navigate('/authorization', { replace: true });
+            navigate('/blogPlatform/authorization', { replace: true });
         }
     }, [isLoggedIn, navigate]);
    
@@ -66,15 +66,14 @@ export const EditProfile: React.FC = () => {
                 .unwrap()
                 .then((payload) => {
                     Cookies.set('token', payload.user.token, { expires: 7, path: '/' })
-                    navigate('/articles', { replace: true })
+                    navigate('/blogPlatform/articles', { replace: true })
 
                 })
                 .catch((error) => {
                     console.log(error)
                 });
-
-        
     }
+
     return(
          <form className={classes.form}
                      onSubmit={handleSubmit(onSubmit)}
@@ -84,7 +83,6 @@ export const EditProfile: React.FC = () => {
                     <div className={classes.username}>Username
                         <input 
                         placeholder="Username"
-                        // value={data?.user.username}//эта строчка заполнит правильно? 
                         autoComplete="no"
                         { ...register('username', {
                             required: 'Name is require field',

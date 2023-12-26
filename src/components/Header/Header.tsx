@@ -30,14 +30,14 @@ export const Header: React.FC = () =>{
     if(isLoggedIn){
         return(
         <div className={classes.header}>
-            <Link to='/articles' className={classes.title}>Putin Vor Blog</Link>
+            <Link to='/blogPlatform/articles' className={classes.title}>Putin Vor Blog</Link>
             <div className={classes.sign}>
-                <Link to='/createArticle' className={classes.create}>Create article</Link>
-                <Link to='/editProfile' >
+                <Link to='/blogPlatform/createArticle' className={classes.create}>Create article</Link>
+                <Link to='/blogPlatform/editProfile' >
                     <div className={classes.username}>{data?.user.username}</div> 
                 </Link>
   
-                <Link to='/editProfile' >
+                <Link to='/blogPlatform/editProfile' >
                     <img src={data?.user?.image || noImage} alt={'no image'} className={classes.image}></img>
                 </Link>
                 <button className={classes.out} onClick={() =>logOut()}>Log out</button>
@@ -48,10 +48,10 @@ export const Header: React.FC = () =>{
     else{
         return(
             <div className={classes.header}>
-                <Link to='/articles' className={classes.title}>Putin Vor Blog</Link>
+                <Link to='/blogPlatform/articles' className={classes.title}>Putin Vor Blog</Link>
                 <div className={classes.sign}>
-                    <Link to='/authorization' className={classes.in}>Sign In</Link>
-                    <Link to='/registration' className={classes.up}>Sign Up</Link>
+                    <Link to='/blogPlatform/authorization' className={classes.in}>Sign In</Link>
+                    <Link to='/blogPlatform/registration' className={classes.up}>Sign Up</Link>
                 </div>
             </div>
         )

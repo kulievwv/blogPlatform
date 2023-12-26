@@ -62,7 +62,7 @@ export const CreateArticle: React.FC = () => {
     createArticle(articleData)
       .unwrap()
       .then((payload) => {
-        navigate('/articles', { replace: true });
+        navigate('/blogPlatform/articles', { replace: true });
       })
       .catch((error) => {
         console.log(error);
